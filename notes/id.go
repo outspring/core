@@ -7,21 +7,21 @@ const (
 	noteIdTimeLayout = "20060102150405"
 )
 
-type noteId struct {
+type NoteId struct {
 	time  time.Time
 	value string
 }
 
-func (id noteId) Time() time.Time {
+func (id NoteId) Time() time.Time {
 	return id.time
 }
 
-func (id noteId) Value() string {
+func (id NoteId) Value() string {
 	return id.value
 }
 
-func NewNoteId(t time.Time) noteId {
-	return noteId{
+func NewNoteId(t time.Time) *NoteId {
+	return &NoteId{
 		time:  t,
 		value: t.Format(noteIdTimeLayout),
 	}
