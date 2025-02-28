@@ -22,68 +22,10 @@ var (
 	ErrInvalidNoteType = errors.New("invalid note type")
 )
 
-type Note struct {
+type NoteMetadata struct {
 	Id       string
 	Type     NoteType
+	Content  string
 	Path     []string
 	Children []string
-}
-
-type TextNote struct {
-	Note    Note
-	Content string
-}
-
-type ImageNote struct {
-	Note    Note
-	Content string
-}
-
-type LinkNote struct {
-	Note    Note
-	Content string
-	To      string
-}
-
-type VideoNote struct {
-	Note    Note
-	Content string
-}
-
-type AudioNote struct {
-	Note    Note
-	Content string
-}
-
-type PdfNote struct {
-	Note    Note
-	Content string
-}
-
-type ExcalidrawNote struct {
-	Note    Note
-	Content string
-}
-
-type FileNote struct {
-	Note    Note
-	Content string
-}
-
-type CodeNote struct {
-	Note     Note
-	Language string
-	Filename string
-	Content  string
-}
-
-type QuoteNote struct {
-	Note    Note
-	Content string
-	By      string
-}
-
-type LatexNote struct {
-	Note    Note
-	Content string
 }

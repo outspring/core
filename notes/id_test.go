@@ -19,6 +19,6 @@ func TestNewNoteId(t *testing.T) {
 	for _, test := range tests {
 		id := NewNoteId(test.time)
 
-		assert.Equal(t, id.value, test.expected)
+		assert.Equal(t, test.expected, id.value)
 	}
 }

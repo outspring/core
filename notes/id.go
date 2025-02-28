@@ -20,8 +20,8 @@ func (id NoteId) Value() string {
 	return id.value
 }
 
-func NewNoteId(t time.Time) *NoteId {
-	return &NoteId{
+func NewNoteId(t time.Time) NoteId {
+	return NoteId{
 		time:  t,
 		value: t.Format(noteIdTimeLayout),
 	}
