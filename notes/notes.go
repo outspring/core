@@ -29,3 +29,11 @@ type NoteMetadata struct {
 	Path     []string
 	Children []string
 }
+
+func ReadCurrentNote() {}
+
+func ChangeCurrentNote() {}
+
+func NestNote() {}
+
+func UnnestNote() {}
